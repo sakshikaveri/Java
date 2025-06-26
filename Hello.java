@@ -27,5 +27,14 @@ class Hello
         //underscore
         int underscore_number = 10_00_000;
         System.out.println(underscore_number);
+
+        //literals in decimal
+        double dec = 12e10;
+        System.out.println(dec);
+
+        //literals in char
+        char character_new = 'a';
+        character_new++;   //incremented to b
+        System.out.println(character_new);
     }
 }
