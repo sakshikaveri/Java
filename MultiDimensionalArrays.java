@@ -17,5 +17,14 @@ public class MultiDimensionalArrays {
             }
             System.out.println();
         }
+
+        System.out.println();
+        //enhanced for loop
+        for (int n[]:nums){  // here n is an iterator which has an array 
+            for (int m:n){   // here m is an iterator which iterates over single array
+                System.out.print(m +" ");
+            }
+            System.out.println();
+        }
     }
 }
