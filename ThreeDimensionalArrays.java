@@ -25,6 +25,7 @@ public class ThreeDimensionalArrays {
         }
 
         System.out.println();
+        //Jagged arrays
         int numbers[][][] = new int[3][][];
         numbers[0]= new int[4][];
         numbers[0][0] = new int[5];
