@@ -25,5 +25,10 @@ public class ArrayOfObjects{
         for(int i=0;i<students.length;i++){
             System.out.println("Name:"+students[i].name+" Age:"+students[i].age);
         }
+
+        //enhanced for loop(for-each loop) -- pros(no issue of exception)
+        for(Student stud : students){
+            System.out.println(stud.name +" : "+stud.age);
+        }
     }
 }
