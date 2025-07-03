@@ -32,5 +32,7 @@ public class encapsulation {
         obj1.setAge(22);
         obj1.setName("Sakshi");
         System.out.println(obj1.getName() + " :" + obj1.getAge());
+
+        //using getters and setters private variables(instance) can be accessed within a different class
     }
 }
