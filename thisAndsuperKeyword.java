@@ -1,4 +1,4 @@
-class A {
+class A extends Object {
 
     public A() {
         super(); // it's bydefault present in every class
