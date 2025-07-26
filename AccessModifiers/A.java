@@ -5,17 +5,27 @@ public class A {
     // int number; //cannot be accessed in other package
     // public int number; //now it can be accessed in other package
 
-    private int number; // can be used in it's own class
+    protected int number; // can be used in it's own class
 
+    /*public static void main(String[] args) {
 
-    public static void main(String[] args) {
+        class B extends A {
+        }  //same package subclass
+        B obj1 = new B();
+        System.out.println(obj1.number);
+        A obj = new A();
+        System.out.println(obj.number);
 
-            class B extends A{
-            B obj = new B();
-           // System.out.println(obj.number);  // will give error as number can be used only in class A and not in class B
-    }
-            A obj = new A();
-            System.out.println(obj.number);
+    }*/
+
 }
 
-}
+        class C{    //same package non subclass
+            public static void main(String[] args) {
+
+                        A obj2 = new A();  // as number is in Class A memory
+                        System.out.println(obj2.number);
+                
+            }
+        }
+

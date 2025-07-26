@@ -1,5 +1,7 @@
 class A extends Object {
 
+    public char[] number;
+
     public A() {
         super(); // it's bydefault present in every class
         System.out.println("In A default constructor");
