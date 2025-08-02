@@ -1,25 +1,21 @@
 
 
 //final keyword for variable,method and class
-class Owner{
-    final String name = "Sakshi";
+final class Owner{
+    //to avoid subclasses from inheriting parent class and all its features we can make the entire class final
+    public void show(){
+        System.out.println("This is a confidential function!");
+    }
 }
 
+//will give error- The type Duplicate cannot subclass the final class Owner
 class Duplicate extends Owner{
 
 }
 
 public class FinalKeyword {
     public static void main(String[] args) {
-        int num = 10;
-        num=11;
-        System.out.println(num);  // will change value of num, if not required then use final keyword
-        final int newNumber = 11;
-        //newNumber = 12;   // will give error, cannot be changed
-        System.out.println(newNumber);
-
-        Owner obj = new Owner();
-        //obj.name="Kaveri";  // will give error
-        System.out.println(obj.name);
+        Duplicate obj = new Duplicate();
+        obj.show();
     }
 }
