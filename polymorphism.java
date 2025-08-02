@@ -19,6 +19,14 @@ class C extends A {
     }
 }
 
+
+//method overloading, compile time polymorphism-- when we give parameters at that time only decided 
+
+class D extends A{
+    public void displayResult(int a){
+        System.out.println("Hi function from subclass D! "+a);
+    }
+}
 class polymorphism{
     public static void main(String[] args) {
         A obj = new A();
@@ -30,5 +38,10 @@ class polymorphism{
 
         objnew = new C();
         objnew.displayResult();  // will call C class's function
+
+        D object = new D();
+        int num = 5;
+        object.displayResult(num);  // will call D class's function
+        object.displayResult();     // will call A class's function
     }
 }
