@@ -32,6 +32,8 @@ class polymorphism{
         A obj = new A();
         obj.displayResult();  // metjod from subclass is called
 
+
+        //Dynamic method dispatch-- referencing parent class but behaving like child class
         A objnew;
         objnew= new B();
         objnew.displayResult();  // will call B class's function
