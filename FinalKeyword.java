@@ -3,7 +3,7 @@
 //final keyword for variable,method and class
 class Owner{
 
-    final public void show(){
+    public void show(){
         System.out.println("This is a confidential function created by the owner!");
     }
 
