@@ -1,31 +1,27 @@
-abstract class One {  //abstract class can have concrete methods and abstract methods both
-    public abstract void show();
+interface One { // interfaces have by default public abstract methods and no concrete methods
+    void show();
 
-    public abstract void show2();
+    void show2();
 
-    public void show3(){
-        System.out.println("Concrete method!!");
-    }
+    //all variables in interfaces are public static final and need to be intialized 
+    int age =22; 
+    String name="Sakshi";
 }
-
-
-//but we are facing problem we have to create a class to only define the inherited methods in order to use 
-class Two extends One {
+ 
+class Two implements One {
 
     public void show() {
-        // TODO Auto-generated method stub
+        System.out.println("show function");
     }
 
     public void show2() {
-        // TODO Auto-generated method stub
+        System.out.println("show2 function");
     }
 
 }
 
 public class interfaceClasses {
     public static void main(String[] args) {
-
-        // One obj = new One(); //will give error--Cannot instantiate the type One
         One obj = new Two();
         obj.show();
         obj.show2();
