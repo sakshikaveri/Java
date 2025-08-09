@@ -3,12 +3,12 @@ public class ExceptionInJava {
 
         // System.out.Println("Hello"); //compile time exception-->The method
         // Println(String) is undefined for the type PrintStream
-        int i = 0;
+        int i = 4;
         int j = 0;
         int nums[] = new int[3];
 
         try {
-            j = 8 / i; // runtime exception--> java.lang.ArithmeticException: / by zero
+            j = 8 / i;
             System.out.println(nums[1]);
             System.out.println(nums[3]);
         }
