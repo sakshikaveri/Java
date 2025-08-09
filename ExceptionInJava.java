@@ -6,11 +6,13 @@ public class ExceptionInJava {
         int i = 4;
         int j = 0;
         int nums[] = new int[3];
+        String name = null;
 
         try {
             j = 8 / i;
             System.out.println(nums[1]);
-            System.out.println(nums[3]);
+            //System.out.println(nums[3]);
+            System.out.println(name.length());
         }
         catch (ArithmeticException e){
             System.out.println("This is arithmetic exception catch block->"+e);
