@@ -1,3 +1,15 @@
+class SakshiException extends Exception{
+
+    public SakshiException(String message){
+        //System.err.println(message);
+        super(message);  
+        /*
+        if we don't write super(message) the parent class Exception will not get the message and incatch block of SakshiException we will get only className 
+        The default toString() of Throwable is: getClass().getName() + ": " + getMessage(), will only get className
+        */
+    }
+}
+
 public class ExceptionInJava {
     public static void main(String[] args) {
 
@@ -9,11 +21,17 @@ public class ExceptionInJava {
         try {
             j = 8 / i;
             //here we get j as zero, if we don't want j as zero and want to throw exception for same we can use throw keyword allowing to create a custom error.
-            throw new ArithmeticException("Value cannot be zero");
+            //throw new ArithmeticException("Value cannot be zero");
+            throw new SakshiException("Custom based message");
         }
         catch (ArithmeticException e){
             j=10;  //handling the exception
             System.out.println("This is arithmetic exception catch block->"+e);
+        }
+
+        catch(SakshiException e){
+            System.err.println("in my exception "+e);
+
         }
 
         catch (Exception e) {
