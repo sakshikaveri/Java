@@ -3,25 +3,18 @@ public class ExceptionInJava {
 
         // System.out.Println("Hello"); //compile time exception-->The method
         // Println(String) is undefined for the type PrintStream
-        int i = 4;
+        int i = 9;
         int j = 0;
-        int nums[] = new int[3];
-        String name = null;
 
         try {
             j = 8 / i;
-            System.out.println(nums[1]);
-            //System.out.println(nums[3]);
-            System.out.println(name.length());
+            //here we get j as zero, if we don't want j as zero and want to throw exception for same we can use throw keyword allowing to create a custom error.
+            throw new ArithmeticException("Value cannot be zero");
         }
         catch (ArithmeticException e){
             System.out.println("This is arithmetic exception catch block->"+e);
         }
 
-        catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("This array index out of bounds exception->"+e);
-
-        }
         catch (Exception e) {
             System.out.println("Customised main class exception message " + e);
         }
