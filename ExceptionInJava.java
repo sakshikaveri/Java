@@ -1,43 +1,29 @@
-class SakshiException extends Exception{
 
-    public SakshiException(String message){
-        //System.err.println(message);
-        super(message);  
-        /*
-        if we don't write super(message) the parent class Exception will not get the message and incatch block of SakshiException we will get only className 
-        The default toString() of Throwable is: getClass().getName() + ": " + getMessage(), will only get className
-        */
+//if you know this line would throw exception then you can use throws keyword like i know this will throw exception but i would not handle it let my manager handle it as he's calling me
+class Demo {
+    public void showClassName() throws ClassNotFoundException {
+        Class.forName("Sakshi");
     }
 }
 
 public class ExceptionInJava {
     public static void main(String[] args) {
 
-        // System.out.Println("Hello"); //compile time exception-->The method
-        // Println(String) is undefined for the type PrintStream
-        int i = 9;
-        int j = 0;
+        /*
+         * checked exception-- would give error if class doesnt exist
+         * try {
+         * Class.forName("Sakshi");
+         * } catch (ClassNotFoundException e) {
+         * e.printStackTrace();
+         * }
+         */
 
+        Demo obj = new Demo();
         try {
-            j = 8 / i;
-            //here we get j as zero, if we don't want j as zero and want to throw exception for same we can use throw keyword allowing to create a custom error.
-            //throw new ArithmeticException("Value cannot be zero");
-            throw new SakshiException("Custom based message");
-        }
-        catch (ArithmeticException e){
-            j=10;  //handling the exception
-            System.out.println("This is arithmetic exception catch block->"+e);
+            obj.showClassName();
+        } catch (ClassNotFoundException e) {
+            System.out.println("Cannot find class " + e);
         }
 
-        catch(SakshiException e){
-            System.err.println("in my exception "+e);
-
-        }
-
-        catch (Exception e) {
-            System.out.println("Customised main class exception message " + e);
-        }
-        System.out.println(j);
-        System.out.println("Outside of try catch!");
     }
 }
