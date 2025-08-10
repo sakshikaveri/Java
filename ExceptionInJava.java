@@ -12,6 +12,7 @@ public class ExceptionInJava {
             throw new ArithmeticException("Value cannot be zero");
         }
         catch (ArithmeticException e){
+            j=10;  //handling the exception
             System.out.println("This is arithmetic exception catch block->"+e);
         }
 
