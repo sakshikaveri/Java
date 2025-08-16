@@ -21,5 +21,13 @@ public class SetinJava {
 
         }
 
+        // we can also use Iterable interface to iterate over elements
+
+        Iterator<Integer> values = nums.iterator();
+
+        while (values.hasNext()) {
+            System.out.println(values.next());
+
+        }
     }
 }
