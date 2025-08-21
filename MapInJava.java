@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -6,7 +7,7 @@ import java.util.TreeSet;
 public class MapInJava {
     public static void main(String[] args) {
 
-        Map<String, Integer> students = new TreeMap<>();
+        Map<String, Integer> students = new LinkedHashMap<>();
         students.put("Sakshi", 50);
         students.put("Saurabh", 60);
         students.put("Vinuta", 90);
