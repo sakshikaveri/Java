@@ -1,10 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class MapInJava {
     public static void main(String[] args) {
 
-        Map<String, Integer> students = new HashMap<>();
+        Map<String, Integer> students = new TreeMap<>();
         students.put("Sakshi", 50);
         students.put("Saurabh", 60);
         students.put("Vinuta", 90);
