@@ -1,0 +1,11 @@
+@FunctionalInterface
+interface A{
+    void show();
+}
+class Main {
+    public static void main(String[] args) {
+        A obj =() -> System.out.println("Inside show method using lambda expression");
+        obj.show();
+        
+    }
+}
